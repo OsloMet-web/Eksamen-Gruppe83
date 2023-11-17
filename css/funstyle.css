@@ -1,0 +1,184 @@
+h2 {
+  vertical-align: center; /*Vertical alignment */
+  text-align: center; /* Centers the text horizontally */
+}
+
+/* Setting default margin and setting height of HTML and body*/
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* Global styles for all elements */
+* {
+  font-family: "Raleway"; /* Sets the font family */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* Styles for the top navigation bar */
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0; /* Fallback background color */
+  background: linear-gradient(to left, #f46b45, #eea849); /* Gradient background */
+  color: #FFF; /* Text color */
+  height: 50px; /* Height of the navigation bar */
+  padding: 1em; /* Padding around the content inside the navigation bar */
+}
+
+/* Styles for the menu list */
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none; /* Removes default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for menu items */
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+/* Styles for the menu button container */
+.menu-button-container {
+  display: none; /* Initially hidden on larger screens */
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the menu toggle checkbox */
+#menu-toggle {
+  display: none; /* Hides the checkbox */
+}
+
+/* Styles for the menu button and its pseudo-elements */
+.menu-button, .menu-button::before, .menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+/* Styles for the menu button pseudo-elements */
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+/* Styles for the menu button animation when checked */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/* Media query for screens up to 700px width */
+@media (max-width: 1200px) {
+  .menu-button-container {
+    display: flex; /* Displays the menu button on smaller screens */
+  }
+  
+  /* Styles for the menu on smaller screens */
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styles for menu items when the toggle is checked */
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* Styles for menu items on smaller screens */
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  
+  /* Styles for the last menu item on smaller screens */
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+/* Styles for the navigation buttons */
+.navigation-button {
+  display: inline-block;
+  padding: 3px 20px;
+  height: 25px;
+  width: 200px;
+  background-color: rgba(234, 211, 12, 0.849);
+  color: #515151;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for navigation buttons */
+.navigation-button:hover {
+  background-color: #515151;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Styles for activated/selected navigation buttons */
+.navigation-button-activated {
+  display: inline-block;
+  padding: 3px 20px;
+  height: 25px;
+  width: 200px;
+  background-color: #8e8d8d;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

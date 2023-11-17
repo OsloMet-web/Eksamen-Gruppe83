@@ -1,8 +1,16 @@
-html{
-   padding: 1%;
-}
-h1, h2, h3, h4, p{
-    font-family: 'Times New Roman', Times, serif;
+/* Styles for HTML and body elements */
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #E5E4E2;
+  }
+  body{
+    padding: 1%;
+    
+ }
+/*Styles for titles and*/
+  h1, h2, h3, h4, p{
+    font-family: 'Times New Roman', Times, serif; 
 }
 h1,h2{
     text-align:center;
@@ -10,14 +18,13 @@ h1,h2{
 h1{
     font-size: xx-large;
 }
-.navigation-button {
-    /* Style for the button with the class "animated-button" */
+.navigation-button {  /* Style for the button with the class "animated-button" */
     display: inline-block;
     padding: 3px 20px; /*Alignment of text in button*/
     height: 25px; /*Buttonheight size*/
     width: 200px; /*Buttonlenght size*/
     background-color: rgba(234, 211, 12, 0.849); /* Background color when not hovered */
-    color: #ffffff; /*Textcolor*/
+    color: #515151; /*Textcolor*/
     border: none; /*Outline of the button*/
     border-radius: 10px; /*Roundness of edge*/
     font-size: 16px; /*Size of text*/
@@ -27,6 +34,7 @@ h1{
   
   .navigation-button:hover { /*What happens when pointer is over button*/
     background-color: #515151;
+    color: #ffffff;
     transform: scale(1.1);
 }
  .navigation-button-activated{
@@ -85,11 +93,58 @@ h1{
     .aside {
     grid-column: 3 / 4;
     grid-row: 1;
-   
     }
-
     .img{
         max-width: 200%;
         border: 2px solid #000;
         object-fit: cover; /* Ensures the image covers the entire container */
     }
+    #p35picture{
+        content:url(../png/P35.jpg)
+    }
+    #logopicture{
+        content:url("../png/pilestredet.jpg");
+    }
+    #canteen1picture{
+        content:url(../png/p35spiseri.jpg)
+    }
+    #canteen2picture{
+        content:url("../png/p35spiseri3.jpg");
+    }
+    @media (max-width:700px){
+        .top-box-middle-right{
+            grid-column: 2/3;
+            grid-row: 2;
+        }
+        .top-box-right{
+            grid-column: 3/4;
+            grid-row: 2;
+        }/*
+        .main-box{
+            grid-column: 1/4;
+            grid-row: 1;
+            z-index: 2;
+        }
+        .aside {
+            grid-column: 3;
+            grid-row: 1;
+            z-index: 1;
+            
+        } */
+        .img {
+            filter: saturate(50%);
+        }
+        #p35picture{
+            content:url(../png/P35Crop.png)
+        }
+        #logopicture{
+            content:url("../png/pilestredet-crop.png");
+        }
+        #canteen1picture{
+            content:url(../png/p35spiseri-crop.png)
+        }
+        #canteen2picture{
+            content:url("../png/p35spiseri3-crop.png");
+        }
+    }
+    
