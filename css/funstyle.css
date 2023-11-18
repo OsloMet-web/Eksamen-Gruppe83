@@ -1,6 +1,5 @@
-h2 {
-  vertical-align: center; /*Vertical alignment */
-  text-align: center; /* Centers the text horizontally */
+h2{
+  font-size:xx-large;
 }
 
 /* Setting default margin and setting height of HTML and body*/
@@ -14,7 +13,12 @@ html, body {
   font-family: "Raleway"; /* Sets the font family */
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
-
+video{
+  width: 900;
+}
+img{
+  width: 400;
+}
 /* Styles for the top navigation bar */
 .top-nav {
   display: flex;
@@ -145,6 +149,29 @@ html, body {
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
+  .main-box {
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+
+  .aside1 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+
+  .secondary-box {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .aside2 {
+    grid-column: 1 / 4;
+    grid-row: 4;
+ 
+  }
+  video{
+    width: auto;
+  }
 }
 
 /* Styles for the navigation buttons */
@@ -153,13 +180,13 @@ html, body {
   padding: 3px 20px;
   height: 25px;
   width: 200px;
-  background-color: rgba(234, 211, 12, 0.849);
   color: #515151;
   border: none;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  animation: colorChangeButton 5s infinite;
 }
 
 /* Hover effect for navigation buttons */
@@ -182,3 +209,57 @@ html, body {
   font-size: 16px;
   cursor: pointer;
 }
+/* Define a keyframe animation called colorChange */
+@keyframes colorChangeText {  /*Textcolor*/
+  0% { color: red; }        /* At the beginning of the animation (0%), set the color to red */
+  25% { color: blue; }      /* At 25% of the animation duration, change the color to blue */
+  50% { color: green; }     /* At 50% of the animation duration, change the color to green */
+  75% { color: orange; }    /* At 75% of the animation duration, change the color to orange */
+  100% { color: purple; }   /* At the end of the animation (100%), set the color to purple */
+}
+.color-changing {
+  /* Use the "colorChange" animation defined above */
+  animation: colorChangeText 5s infinite;
+}
+@keyframes colorChangeButton {         /*Background and text for the buttons*/
+  0% { background-color: red; }      /* At the beginning of the animation (0%), set the background color to red */
+  0% { color: blue; } 
+  25% { background-color: blue; }    /* At 25% of the animation duration, change the background color to blue */
+  25% { color: red; }
+  50% { background-color: green; }   /* At 50% of the animation duration, change the background color to green */
+  50% { color: purple; }
+  75% { background-color: orange; }  /* At 75% of the animation duration, change the background color to orange */
+  75% { color: green; }
+  100% { background-color: purple; } /* At the end of the animation (100%), set the background color to purple */
+  100% { color: orange; } 
+}
+
+@keyframes spin{ /* Borrowed from https://www.google.com/search?q=make+a+png+spin+html&sca_esv=583612193&sxsrf=AM9HkKl8zd8JgIq93Jx0Z8LkDKGZIOijaw%3A1700311056949&ei=ELBYZd3GOdOmwPAP39iikA8&ved=0ahUKEwjdjrqkyM2CAxVTExAIHV-sCPIQ4dUDCA8&uact=5&oq=make+a+png+spin+html&gs_lp=Egxnd3Mtd2l6LXNlcnAiFG1ha2UgYSBwbmcgc3BpbiBodG1sMgUQIRigATIFECEYoAEyCBAhGBYYHhgdSJoSUMMGWJ8QcAF4AZABAJgBb6ABhgOqAQM0LjG4AQPIAQD4AQHCAgoQABhHGNYEGLADwgIGEAAYFhgewgIKECEYFhgeGA8YHeIDBBgAIEGIBgGQBgg&sclient=gws-wiz-serp#kpvalbx=_FbBYZZnwEKK1wPAPsKCbyAQ_28*/
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.spin{
+  animation: spin 2s infinite;
+}
+.wrapper{
+  display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+.main-box {
+  grid-column: 1 / 3;
+  grid-row: 1 ;
+  }
+  .aside1 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    }
+  .secondary-box {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  }
+  .aside2 {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    }
+  

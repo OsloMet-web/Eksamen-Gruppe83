@@ -119,18 +119,7 @@ h1{
         .top-box-right{
             grid-column: 3/4;
             grid-row: 2;
-        }/*
-        .main-box{
-            grid-column: 1/4;
-            grid-row: 1;
-            z-index: 2;
         }
-        .aside {
-            grid-column: 3;
-            grid-row: 1;
-            z-index: 1;
-            
-        } */
         .img {
             filter: saturate(50%);
         }
