@@ -100,7 +100,7 @@ h1{
         object-fit: cover; /* Ensures the image covers the entire container */
     }
     #p35picture{
-        content:url(../png/P35.jpg)
+        content:url(../png/hoved_inngang.jpg)
     }
     #logopicture{
         content:url("../png/pilestredet.jpg");
