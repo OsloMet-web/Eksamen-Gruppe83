@@ -178,6 +178,7 @@ img{
   .main-box {
     grid-column: 1 / 4;
     grid-row: 1;
+    padding-left: 10px;
   }
 
   .aside1 {
@@ -196,7 +197,7 @@ img{
  
   }
   video{
-    width: auto;
+    width: 350;
   }
 }
 
