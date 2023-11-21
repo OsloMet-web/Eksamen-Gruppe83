@@ -155,7 +155,7 @@ h1 {
     grid-row: ;
 }
 .photo-1st{
-    grid-column: 1;
+    grid-column: 0/1;
     grid-row: 1;
 }
 .photo-2nd{
