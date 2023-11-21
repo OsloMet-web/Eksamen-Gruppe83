@@ -173,7 +173,7 @@ h1 {
     /* Ensures the image covers the entire container */
 }
 .accessimg{
-    max-width: 300px;
+    max-width: 100%;
     border: 2px solid #000;
 }
 #p35picture {
