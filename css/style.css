@@ -155,8 +155,8 @@ h1 {
     grid-row: ;
 }
 .photo-1st{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 1;
+    grid-row: 1;
 }
 .photo-2nd{
     grid-column: ;
@@ -172,7 +172,6 @@ h1 {
     object-fit: cover;
     /* Ensures the image covers the entire container */
 }
-
 #p35picture {
     content: url(../png/hoved_inngang.jpg)
 }
