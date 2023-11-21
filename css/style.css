@@ -194,6 +194,9 @@ h1 {
 #canteen2picture {
     content: url("../png/p35spiseri3.jpg");
 }
+#helsetjenester {
+    content: url("../png/helsetjenester.jpg");
+}
 
 @media (max-width:700px) {
     .top-box-middle-right {
@@ -224,5 +227,8 @@ h1 {
 
     #canteen2picture {
         content: url("../png/p35spiseri3-crop.png");
+    }
+    #helsetjenester {
+        content: url("../png/helsetjenester.jpg");
     }
 }
