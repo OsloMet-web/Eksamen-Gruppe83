@@ -143,28 +143,28 @@ h1 {
     grid-auto-rows: minmax(100px, auto);
 }
 .text-1st{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 1;
+    grid-row: 2;
 }
 .text-2nd{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 2;
+    grid-row: 1;
 }
 .text-3rd{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 3;
+    grid-row: 2;
 }
 .photo-1st{
     grid-column: 0/1;
     grid-row: 1;
 }
 .photo-2nd{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 2;
+    grid-row: 2;
 }
 .photo-3rd{
-    grid-column: ;
-    grid-row: ;
+    grid-column: 3;
+    grid-row: 1;
 }
 .img {
     max-width: 200%;
