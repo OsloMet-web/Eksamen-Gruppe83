@@ -172,6 +172,10 @@ h1 {
     object-fit: cover;
     /* Ensures the image covers the entire container */
 }
+.accessimg{
+    max-width: 300px;
+    border: 2px solid #000;
+}
 #p35picture {
     content: url(../png/hoved_inngang.jpg)
 }
